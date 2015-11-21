@@ -1,3 +1,4 @@
+[TOC]
 #Kinect v1/OpenCV2.4.7/PCL1.7.2(x86)環境で開発を行う際の設定メモ 2015年11月20日
 ---------------------------------------------------------------------------------------------------------------------
 
@@ -51,7 +52,7 @@ Kinect v1/OpenCV/PCLを利用するためにVisual Studioに設定を行って�
 3. 「全般」
 4. 「追加のインクルードディレクトリ」
 
-##【Debugモード】
+###【Debugモード】
 ```
 C:\Program Files\Microsoft SDKs\Kinect\v1.8\inc;
 C:\OpenCV2.4.7\build\include\opencv2;
@@ -62,7 +63,7 @@ C:\Program Files (x86)\PCL 1.7.2\3rdParty\Boost\include\boost-1_57;
 C:\Program Files (x86)\PCL 1.7.2\include\pcl-1.7;
 ```
 
-##【Releaseモード】
+###【Releaseモード】
 ```
 C:\Program Files\Microsoft SDKs\Kinect\v1.8\inc;
 C:\OpenCV2.4.7\build\include\opencv2;
@@ -80,7 +81,7 @@ C:\Program Files (x86)\PCL 1.7.2\include\pcl-1.7;
 
 ---------------------------------------------------------------------------------------------------------------------
 
-#追加のライブラリディレクトリの設定
+##追加のライブラリディレクトリの設定
 次に，ライブラリをリンクするためのディレクトリを設定します。
 こちらも複数のパスを設定する場合はセミコロン';'で区切ってください。
 設定画面への遷移手順は以下のようになります。
@@ -88,7 +89,7 @@ C:\Program Files (x86)\PCL 1.7.2\include\pcl-1.7;
 2. 「リンカー」
 3. 「追加のライブラリディレクトリ」
 
-##【Debugモード】
+###【Debugモード】
 ```
 C:\Program Files\Microsoft SDKs\Kinect\v1.8\lib\x86;
 C:\OpenCV2.4.7\build\x86\vc11\lib;
@@ -97,7 +98,7 @@ C:\Program Files (x86)\PCL 1.7.2\3rdParty\VTK\lib;
 C:\Program Files (x86)\PCL 1.7.2\3rdParty\Boost\lib;
 ```
 
-##【Releaseモード】
+###【Releaseモード】
 ```
 C:\Program Files\Microsoft SDKs\Kinect\v1.8\lib\x86;
 C:\OpenCV2.4.7\build\x86\vc11\lib;
@@ -108,7 +109,7 @@ C:\Program Files (x86)\PCL 1.7.2\3rdParty\Boost\lib;
 
 ---------------------------------------------------------------------------------------------------------------------
 
-#ライブラリファイルの追加
+##ライブラリファイルの追加
 追加のライブラリディレクトリを設定したあとは，そのライブラリ内にある".lib"ファイルを利用できるようにするための設定を行います。
 ファイル数がかなり多くなりますが，今までと同様に規定の場所に記入するだけです。
 こちらもファイル間の区切りにはセミコロン';'を使うようにしてください。
@@ -117,7 +118,7 @@ C:\Program Files (x86)\PCL 1.7.2\3rdParty\Boost\lib;
 2. 「リンカー」
 3. 「入力」
 
-##【Debugモード】
+###【Debugモード】
 ```
 Kinect10.lib;
 opencv_video247d.lib;opencv_core247d.lib;opencv_imgproc247d.lib;opencv_highgui247d.lib;
@@ -125,7 +126,7 @@ pcl_common_debug.lib;pcl_features_debug.lib;pcl_filters_debug.lib;pcl_io_debug.l
 vtkalglib-6.2-gd.lib;vtkChartsCore-6.2-gd.lib;vtkCommonColor-6.2-gd.lib;vtkCommonComputationalGeometry-6.2-gd.lib;vtkCommonCore-6.2-gd.lib;vtkCommonDataModel-6.2-gd.lib;vtkCommonExecutionModel-6.2-gd.lib;vtkCommonMath-6.2-gd.lib;vtkCommonMisc-6.2-gd.lib;vtkCommonSystem-6.2-gd.lib;vtkCommonTransforms-6.2-gd.lib;vtkDICOMParser-6.2-gd.lib;vtkDomainsChemistry-6.2-gd.lib;vtkexoIIc-6.2-gd.lib;vtkexpat-6.2-gd.lib;vtkFiltersAMR-6.2-gd.lib;vtkFiltersCore-6.2-gd.lib;vtkFiltersExtraction-6.2-gd.lib;vtkFiltersFlowPaths-6.2-gd.lib;vtkFiltersGeneral-6.2-gd.lib;vtkFiltersGeneric-6.2-gd.lib;vtkFiltersGeometry-6.2-gd.lib;vtkFiltersHybrid-6.2-gd.lib;vtkFiltersHyperTree-6.2-gd.lib;vtkFiltersImaging-6.2-gd.lib;vtkFiltersModeling-6.2-gd.lib;vtkFiltersParallel-6.2-gd.lib;vtkFiltersParallelImaging-6.2-gd.lib;vtkFiltersProgrammable-6.2-gd.lib;vtkFiltersSelection-6.2-gd.lib;vtkFiltersSMP-6.2-gd.lib;vtkFiltersSources-6.2-gd.lib;vtkFiltersStatistics-6.2-gd.lib;vtkFiltersTexture-6.2-gd.lib;vtkFiltersVerdict-6.2-gd.lib;vtkfreetype-6.2-gd.lib;vtkftgl-6.2-gd.lib;vtkGeovisCore-6.2-gd.lib;vtkgl2ps-6.2-gd.lib;vtkhdf5-6.2-gd.lib;vtkhdf5_hl-6.2-gd.lib;vtkImagingColor-6.2-gd.lib;vtkImagingCore-6.2-gd.lib;vtkImagingFourier-6.2-gd.lib;vtkImagingGeneral-6.2-gd.lib;vtkImagingHybrid-6.2-gd.lib;vtkImagingMath-6.2-gd.lib;vtkImagingMorphological-6.2-gd.lib;vtkImagingSources-6.2-gd.lib;vtkImagingStatistics-6.2-gd.lib;vtkImagingStencil-6.2-gd.lib;vtkInfovisCore-6.2-gd.lib;vtkInfovisLayout-6.2-gd.lib;vtkInteractionImage-6.2-gd.lib;vtkInteractionStyle-6.2-gd.lib;vtkInteractionWidgets-6.2-gd.lib;vtkIOAMR-6.2-gd.lib;vtkIOCore-6.2-gd.lib;vtkIOEnSight-6.2-gd.lib;vtkIOExodus-6.2-gd.lib;vtkIOExport-6.2-gd.lib;vtkIOGeometry-6.2-gd.lib;vtkIOImage-6.2-gd.lib;vtkIOImport-6.2-gd.lib;vtkIOInfovis-6.2-gd.lib;vtkIOLegacy-6.2-gd.lib;vtkIOLSDyna-6.2-gd.lib;vtkIOMINC-6.2-gd.lib;vtkIOMovie-6.2-gd.lib;vtkIONetCDF-6.2-gd.lib;vtkIOParallel-6.2-gd.lib;vtkIOParallelXML-6.2-gd.lib;vtkIOPLY-6.2-gd.lib;vtkIOSQL-6.2-gd.lib;vtkIOVideo-6.2-gd.lib;vtkIOXML-6.2-gd.lib;vtkIOXMLParser-6.2-gd.lib;vtkjpeg-6.2-gd.lib;vtkjsoncpp-6.2-gd.lib;vtklibxml2-6.2-gd.lib;vtkmetaio-6.2-gd.lib;vtkNetCDF-6.2-gd.lib;vtkNetCDF_cxx-6.2-gd.lib;vtkoggtheora-6.2-gd.lib;vtkParallelCore-6.2-gd.lib;vtkpng-6.2-gd.lib;vtkproj4-6.2-gd.lib;vtkRenderingAnnotation-6.2-gd.lib;vtkRenderingContext2D-6.2-gd.lib;vtkRenderingContextOpenGL-6.2-gd.lib;vtkRenderingCore-6.2-gd.lib;vtkRenderingFreeType-6.2-gd.lib;vtkRenderingFreeTypeOpenGL-6.2-gd.lib;vtkRenderingGL2PS-6.2-gd.lib;vtkRenderingImage-6.2-gd.lib;vtkRenderingLabel-6.2-gd.lib;vtkRenderingLIC-6.2-gd.lib;vtkRenderingLOD-6.2-gd.lib;vtkRenderingOpenGL-6.2-gd.lib;vtkRenderingVolume-6.2-gd.lib;vtkRenderingVolumeOpenGL-6.2-gd.lib;vtksqlite-6.2-gd.lib;vtksys-6.2-gd.lib;vtktiff-6.2-gd.lib;vtkverdict-6.2-gd.lib;vtkViewsContext2D-6.2-gd.lib;vtkViewsCore-6.2-gd.lib;vtkViewsInfovis-6.2-gd.lib;vtkzlib-6.2-gd.lib;
 
 ```
-##【Releaseモード】
+###【Releaseモード】
 ```
 Kinect10.lib;
 opencv_video247.lib;opencv_core247.lib;opencv_imgproc247.lib;opencv_highgui247.lib;
